@@ -77,6 +77,17 @@
 
     --border: #e5e9f0;
   }
+  .dark {
+    --background: #07090d;
+    --foreground: ##e6ecf4;
+
+    --card: #0e121c;
+
+    --primary: #9c84ec;
+    --primary-foreground: #e6ecf4;
+
+    --border: #1f2735;
+  }
 
   * {
     @apply border-border;
