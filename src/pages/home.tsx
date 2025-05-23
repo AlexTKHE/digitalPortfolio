@@ -4,6 +4,7 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
+import { ProjectSection } from "../components/ProjectSection";
 
 export const Home = () => {
 
@@ -19,6 +20,7 @@ export const Home = () => {
             <HeroSection />
             <AboutSection />
             <SkillsSection />
+            <ProjectSection />
         </main>
 
         {/* ending part */}
