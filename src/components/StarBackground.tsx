@@ -1,5 +1,4 @@
-import type { LargeNumberLike } from "crypto";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // starts should have a couple of identities: id, size, x, y, animation duration
 

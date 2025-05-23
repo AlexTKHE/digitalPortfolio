@@ -1,5 +1,4 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 type Project = {
     id: number;
