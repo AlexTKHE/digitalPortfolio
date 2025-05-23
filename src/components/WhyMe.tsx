@@ -4,7 +4,7 @@ import { toast } from 'sonner';
 import { useState } from "react";
 
 
-export const ContactSection = () => {
+export const WhyMe = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const handleSubmit = (e: any) => {
         e.preventDefault() 
@@ -23,58 +23,46 @@ export const ContactSection = () => {
         setIsSubmitting(false);
     }
 
-    return <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-        <div className="conatainer mx-auto max-w-5xl">
+    return <section id="whyMe" className="py-24 px-4 relative bg-secondary/30">
+        <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                Get in <span className="text-primary"> Touch</span>
+                Why <span className="text-primary"> Me</span>
             </h2>
 
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                I like opportunities.
+                I pair relentless work ethic and a rapid learning speed with user-first design, giving Elas a teammate who can adapt instantly and ship polished solutions that people actually want to use.
             </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
+                   {/* <h3 className="text-2xl font-semibold mb-6 text-center">Contact Information</h3> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                    <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-
-                    <div className="space-y-6 justify-center">
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <Mail className="h-6 w-6 text-primary"/> {" "}
-                            </div>
-                            <div>
-                                <h4 className="font-medium">Email</h4>
-                                <a target="_blank" href="alexkerrthompson@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                                    alexkerrthompson@gmail.com
-                                </a>
+                    <div className="space-y-3 max-w-xs">
+                        <div className="items-center text-center">
+                            <div className="ml-2 md:ml-3">
+                                <h4 className="font-medium"><span className="text-primary/70">Bridge Complex Tech & Human Usability</span><br /> I translate intricate systems into clear, intuitive interfaces, ensuring Elas’s tools feel effortless for every user.</h4>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <Phone className="h-6 w-6 text-primary"/> {" "}
-                            </div>
-                            <div>
-                                <h4 className="font-medium">Phone</h4>
-                                <a target="_blank" href="tel:xxx-xxx-xxx" className="text-muted-foreground hover:text-primary transition-colors">
-                                    +x-xxx-xxx-xxx
-                                </a>
+                        <div className="mt-6 md:mt-8 items-center text-center">
+                            <div className="ml-2 md:ml-3">
+                                <h4 className="font-medium"><span className="text-primary/70">Rapid Assimilation of New Stacks</span><br /> From CAD to React to chemical lab work, I consistently master unfamiliar technologies in weeks, not months—ideal for your fast-moving, cross-disciplinary projects.</h4>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <MapPin className="h-6 w-6 text-primary"/> {" "}
-                            </div>
-                            <div>
-                                <h4 className="font-medium">Email</h4>
-                                <a className="text-muted-foreground hover:text-primary transition-colors">
-                                    Pleasanton, California
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        
+                
                     {/* can put social other stuff */}
                 </div>
-                <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+                <div>
+                <div className="items-center text-center">
+                            <div className="ml-2 md:ml-3">
+                                <h4 className="font-medium"><span className="text-primary/70">Design-Driven Engineering Mindset</span><br /> My dual skill set in customer-centric design and development abilities delivers striking products that remain clean, maintainable, and scalable.</h4>
+                            </div>
+                        </div>
+                        <div className="mt-6 md:mt-8 items-center text-center">
+                            <div className="ml-2 md:ml-3">
+                                <h4 className="font-medium"><span className="text-primary/70">Proven Execution & Leadership</span><br /> As an initial member of a startup along with being a student leader, I’ve communitcated and rallied teams, in athletic and academic fields alike, toward tight deadlines and bright lights; I bring that bias for action to Elas.</h4>
+                            </div>
+                        </div>
+                </div>
+                {/*<div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
                         <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
                         <form className="space-y-6">
@@ -114,7 +102,7 @@ export const ContactSection = () => {
 
                             </button>
                         </form>
-                    </div>
+                    </div> */}
             </div>
         </div>
     </section>

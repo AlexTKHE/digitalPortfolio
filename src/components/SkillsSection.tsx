@@ -11,54 +11,51 @@ type Skill = {
 
 const skills: Skill[] = [
 
-    //frontend stuff
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
+    // Frontend
+  { name: "TypeScript", level: 80, category: "Frontend" },
+  { name: "JavaScript", level: 85, category: "Frontend" },
+  { name: "React", level: 75, category: "Frontend" },
+  { name: "Tailwind CSS", level: 75, category: "Frontend" },
+  { name: "CSS", level: 85, category: "Frontend" },
+  { name: "HTML", level: 85, category: "Frontend" },
+  { name: "Responsive Design", level: 70, category: "Frontend" },
 
-    //backend stuff
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
-    {name: "Work Ethic", level:95, category: "Frontend"},
+  // Backend
+  { name: "Node.js", level: 60, category: "Backend" },
+  { name: "Git/GitHub", level: 85, category: "Backend" },
+  { name: "API Integration", level: 65, category: "Backend" },
+  { name: "Java", level: 90, category: "Backend" },
+  { name: "Problem Solving", level: 95, category: "Backend" },
+  { name: "Learning Speed", level: 95, category: "Backend" },
+  { name: "System Thinking", level: 75, category: "Backend" },
 
-    //graphic design stuff
-    {name: "Alex", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
-    {name: "Work Ethic", level:95, category: "Backend"},
+  // Graphic Design
+  { name: "Logo Design", level: 95, category: "Graphic Design" },
+  { name: "Brand Identity", level: 90, category: "Graphic Design" },
+  { name: "UI/UX Design", level: 90, category: "Graphic Design" },
+  { name: "Typography", level: 85, category: "Graphic Design" },
+  { name: "Visual Storytelling", level: 95, category: "Graphic Design" },
 
-    //lab stuff chemistry stuff
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
-    {name: "Work Ethic", level:95, category: "Tools"},
+  // Lab Experience / Chemistry
+  { name: "Analytical Thinking", level: 95, category: "Lab Experience" },
+  { name: "Lab Equipment Handling", level: 80, category: "Lab Experience" },
+  { name: "Data Analysis", level: 85, category: "Lab Experience" },
+  { name: "Safety Protocols", level: 90, category: "Lab Experience" },
+  { name: "Scientific Reporting", level: 85, category: "Lab Experience" },
+  { name: "Technical Documentation", level: 85, category: "Lab Experience" },
 
-    //tools (add figma)
-    {name: "Work Ethic", level:95, category: "Lab Expierence"},
-    {name: "Work Ethic", level:95, category: "Lab Expierence"},
-    {name: "Work Ethic", level:95, category: "Lab Expierence"},
-    {name: "Work Ethic", level:95, category: "Lab Expierence"},
-    {name: "Work Ethic", level:95, category: "Lab Expierence"},
+  // Tools
+  { name: "Adobe Photoshop", level: 90, category: "Tools" },
+  { name: "Figma", level: 90, category: "Tools" },
+  { name: "AutoCAD", level: 85, category: "Tools" },
+  { name: "3D Printing", level: 85, category: "Tools" },
+  { name: "Adobe Inventor", level: 80, category: "Tools" },
 ]
 
-const categories = ["all", "Frontend", "Backend", "Tools", "Lab Expierence"];
+const categories = ["all", "Frontend", "Backend", "Graphic Design", "Tools", "Lab Experience"];
 
 export const SkillsSection = () => {
-    const [activeCategory, setActiveCategory] = useState("all");
+    const [activeCategory, setActiveCategory] = useState("Frontend");
 
     const filteredSkills = skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory);
     return <section id="skills" className="py-24 px-4 relative bg-secondary/30">

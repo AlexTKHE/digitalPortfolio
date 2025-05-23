@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Settings } from "lucide-react";
 
 type Project = {
     id: number;
@@ -10,33 +10,61 @@ type Project = {
     githubUrl: string;
 }
 const projects: Project[] = [
+   
     {
         id:1,
-        title: "Graphic Design",
-        description: "some beautiful stuff",
-        image: "/projects/graphicDesign1.png",
-        tags: ["Art", "Artsy", "Mucho Arto"],
+        title: "Nize Classroom Dashboard",
+        description: "Streamlined teacher dashboard showing live attendance stats, student status, and class analytics in a single view.",
+        image: "/projects/figma1.png",
+        tags: ["Figma", "UI/UX", "EdTech"],
         demourl: "#",
         githubUrl: "#",
     },
     {
         id:2,
-        title: "Graphic Design",
-        description: "some beautiful stuff",
-        image: "/projects/graphicDesign2.jpg",
-        tags: ["Art", "Artsy", "Mucho Arto"],
+        title: "Device Pairing Flow",
+        description: "Clean “Connect Device” screen that guides users through hardware setup with a single-click action and playful school-themed icons.",
+        image: "/projects/figma3.png",
+        tags: ["Figma", "Interaction Design"],
         demourl: "#",
         githubUrl: "#",
     },
     {
         id:3,
-        title: "Graphic Design",
-        description: "some beautiful stuff",
-        image: "/projects/graphicDesign3.png",
-        tags: ["Art", "Artsy", "Mucho Arto"],
+        title: "Attendance Manager",
+        description: "Revamped confirmation panel featuring color-coded status chips, real-time roster data, and quick-action buttons for classroom efficiency.",
+        image: "/projects/figma2.png",
+        tags: ["Figma", "Data Visualization"],
         demourl: "#",
         githubUrl: "#",
-    }
+    }, 
+     {
+        id:4,
+        title: "FHS Tennis Logo",
+        description: "Developed a modern crest-style emblem for Foothill High School athletics, creating a clean and strong brand.",
+        image: "/projects/graphicDesign1.png",
+        tags: ["Logo Design", "Typography"], 
+        demourl: "#",
+        githubUrl: "#",
+    },
+    {
+        id:5,
+        title: "Philanthropy Poster",
+        description: "Designed a vintage-western flyer for Sigma Chi’s Derby Days week, pairing retro fonts with hand-drawn graphics to increase engagement.",
+        image: "/projects/graphicDesign2.png",
+        tags: ["Event Branding", "Vintage"],  
+        demourl: "#",
+        githubUrl: "#",
+    },
+    {
+        id:6,
+        title: "Desert Illustration",
+        description: "Illustration of a sunset desert scene—mountains, cacti. Built for a clean and warming look.",
+        image: "/projects/graphicDesign3.png",
+        tags: ["Illustration", "Apparel Design"],  
+        demourl: "#",
+        githubUrl: "#",
+    },
 ];
 
 export const ProjectSection = () => {
@@ -68,12 +96,12 @@ export const ProjectSection = () => {
                         <p className = "text-muted-foreground text-sm mb-4">{project.description}</p>
                         <div className="display-flex justify-between items-center">
                             <div className="flex space-x-3"> 
-                                <a href={project.demourl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                    <ExternalLink size={20} />
+                                <a target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                    <Settings size={20} />
                                 </a>
-                                <a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                {/*<a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                     <Github size={20}/>
-                                </a>
+                                </a>*/}
                             </div>
                         </div>
                     </div>
