@@ -1,27 +1,8 @@
-import { Mail, MapPin, Phone, Send } from "lucide-react"
-import { cn } from "../lib/utils"
-import { toast } from 'sonner';
 import { useState } from "react";
 
 
 export const WhyMe = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const handleSubmit = (e: any) => {
-        e.preventDefault() 
-
-        setIsSubmitting(true);
-
-        setTimeout(() => {
-            toast(
-                <div className="w-full text-center">
-                  <h1 className="font-semibold text-lg">Message Sent</h1>
-                  <p className="text-sm text-muted-foreground">Thank you for your message!</p>
-                </div>
-              );
-        }, 1500)
-
-        setIsSubmitting(false);
-    }
+    const [] = useState(false);
 
     return <section id="whyMe" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
