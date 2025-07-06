@@ -160,6 +160,17 @@
   box-shadow: 0 0 10px 5px rgba(255,255,255,0.3);
 }
 
+/* Mobile-specific animation fixes */
+@media (max-width: 767px) {
+  .mobile-alex-fix {
+    animation: fade-in 0.5s ease-out 0.15s forwards !important;
+  }
+  
+  .mobile-dots-fix {
+    animation: fade-in 0.5s ease-out 0.45s forwards !important;
+  }
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;

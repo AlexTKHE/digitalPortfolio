@@ -7,9 +7,9 @@ export const HeroSection = () => {
             <div className="space-y-6">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
                     <span className="opacity-0 animate-fade-in">Hello! I am </span>
-                    <span className="text-primary opacity-0 animate-fade-in-delay-1">Alex </span>
+                    <span className="text-primary opacity-0 animate-fade-in-delay-1 mobile-alex-fix">Alex </span>
                     <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Thompson</span>
-                    <span className="text-primary ml-2 opacity-0 animate-fade-in-delay-3">...</span>
+                    <span className="text-primary ml-2 opacity-0 animate-fade-in-delay-3 mobile-dots-fix">...</span>
                 </h1>
 
                 <p className="text-md md:text-lg text-muted-foreground max-w-none md:max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
@@ -21,7 +21,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="flex flex-col items-center mb-4 opacity-0 animate-fade-in-delay-4">
+        <div className="flex flex-col items-center mb-4 mt-8 md:mt-4 opacity-0 animate-fade-in-delay-4">
             <span className="text-sm text-muted-foreground mb-2  animate-bounce"> Scroll </span>
             <ArrowDown className="h-5 w-5 text-primary  animate-bounce" />
         </div>
