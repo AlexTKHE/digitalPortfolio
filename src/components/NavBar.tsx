@@ -12,19 +12,20 @@ const navItems = [
 
 export const NavBar = () => {
     const[isScrolled, setIsScrolled] = useState(false);
-    const[isMenuOpen, setIsMenuOpen] = useState(true);
+    const[isMenuOpen, setIsMenuOpen] = useState(false);
     
     useEffect(() => {
         const handleScroll = () => {
-            // check if they scrolled out of nav bar
-            setIsScrolled(window.screenY > 10)
+            // Fix: use scrollY instead of screenY and check if scrolled more than 10px
+            setIsScrolled(window.scrollY > 10)
         };
         
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll);
-    })
+    }, [])
+    
     return <nav className = {cn("fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md inset-shadow-xs" : "py-5"
+        isScrolled ? "py-3 bg-background/95 backdrop-blur-md shadow-md border-b border-border/10" : "py-5 bg-background/80 backdrop-blur-sm"
     )}>
         <div className="container flex items-center justify-between">
             <a className="text-xl font-bold text-primary flex">
